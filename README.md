@@ -1,1 +1,1 @@
-# trepic
+I used Ruby on Rails for the sign up form fields and email notifications. I applied many of the responsive skills I learned in the Udacity nanodegree on Front End Web Development. For more information on the context around this project, visit my blog at http://alexanderous.co/blog/what-ive-been-working-on-lately-trepic.
