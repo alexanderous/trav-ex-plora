@@ -1,0 +1,106 @@
+
+<div class="landing-container"><a name="top"></a>
+	<div class="top-hero" title="underwater hotel in the middle of an ocean">
+	<%= link_to image_tag("up-arrow-button.png", :class => "up-button"), "#top" %>
+
+		<%= link_to image_tag("trepic-logo-white-shadow.png", :class => "trepic-logo"), root_path %>
+
+		<%= link_to image_tag("splash-logo-solo-small.png", :class => "trepic-logo-no-slogan"), root_path %>
+
+
+			<h4 class="top-call"><span class="hide-when-small">Sign up for a special invite and f</span><span class="appear-when-small">F</span>ind your next perfect destination.</h4>
+			<div class="top-sign-up-form">
+				<%= form_for :invite, url: invites_path do |f| %>
+				    <%= f.text_field :email, :placeholder => "your email", :class => "sign-up-form" %>
+				    <%= f.submit "SIGN UP", :class => "sign-up-button" %>
+				<% end %>
+			</div>
+		<h1 class="top-title add-shadow">Discover Your Next Epic Trip</h1>
+		<h3 class="top-subtitle add-shadow">Book Legendary Experiences, through the Trepic App</h3>
+		<h2 class="add-shadow hide-when-small-header-question">Where are the best underwater hotels located?</h2>
+		<div class="social-media-icons">
+			<a href="https://www.pinterest.com/trepicepictrips/"><img class="social-icon" src="img/social/pinterest-icon.png"></a>
+			<a href="https://www.facebook.com/trepic.makeyourtripepic/"><img class="social-icon" src="img/social/facebook-icon.png"></a>
+			<a href="https://twitter.com/trepicgoepic"><img class="social-icon" src="img/social/instagram-icon.png"></a>
+			<a href="https://twitter.com/trepicepictrips"><img class="social-icon" src="img/social/twitter-icon.png"></a>
+		</div>
+	</div>
+	<div class="experience-panel-1" title="scuba diver encountering a gigantic manta ray">
+		<h2 class="add-shadow add-top-margin">Where are the world's best places to encounter majestic sea life?</h2>
+	</div>
+	<div class="experience-panel-2" title="champagne for two on a deck with a jaw-dropping vista of foggy mountains">
+		<h2 class="add-shadow add-top-margin">Where are the top rated spas of the year?</h2>
+	</div>
+	<div class="experience-panel-3" title="family sitting down indoors for lunch while giraffe reaches for food through an open window">
+		<h2 class="add-shadow add-top-margin">Where are the best places for children to interact with wildlife?</h2>
+	</div>
+	<div class="pink-gradient">
+		<!--h2 class="add-top-margin">Book These Experiences and More</h2-->
+		<!--p class="pink-body-text"--><h1>Trepic is a patent-pending, visually-oriented destination discovery app.<span class="hide-when-small-4"> Find your next perfect destination by choosing from a vast array of preferences.</span></h1><!--/p-->
+		<div class="pink-panel-bottom"><img class="pink-panel-logo hide-when-small" src="img/logo-black-yellow.png"><img class="pink-panel-logo appear-when-small" src="img/splash-logo-solo-small-gray.png"></div>
+	</div>
+	<div class="steps-panel-1" title="iphone with Trepic app open, showcasing the experience discovery feature">
+		<h3 class="panel-title">1. GET INSPIRED.<span class="hide-when-small-3"> DISCOVER EPIC EXPERIENCES YOU WISH TO HAVE.</span></h3>
+		<!--h4 class="panel-subtitle">DISCOVER EPIC EXPERIENCES YOU WISH TO HAVE</h4-->
+		<p class="panel-body-text">Search through experiences visually to find what you want to do.</p>
+		<ul class="panel-lists">
+			<li><p>Diving in crystal caves?</p></li>
+			<li><p>Paddleboarding in the arctic?</p></li>
+			<li><p>Steamed milk body soak over the mountains?</p></li>
+			<li><p class="hide-when-small-2">Learn astronomy, geology, art, and archaeology from experts in the field?</p></li>
+			<li><p class="hide-when-small-2">Find trusted sources for humanitarian service?</p></li>
+		</ul>
+	</div>
+	<div class="steps-panel-2" title="three iphones with Trepic app open, showcasing visual exploration and booking features">
+		<h3 class="panel-title">2. GET RESULTS.<span class="hide-when-small-3"> DISCOVER TOP DESTINATIONS RANKED FOR YOU.</span></h3>
+		<!--h4 class="panel-subtitle">DISCOVER TOP DESTINATIONS TAILORED JUST FOR YOU</h4-->
+		<p class="panel-body-text hide-when-small-2">Find destinations tailored for you based on your preferences.</p>
+	</div>
+	<div class="steps-panel-3" title="iphone with Trepic app open, showcasing calendar booking feature">
+		<h3 class="panel-title">3. BOOK YOUR TRIP.<span class="hide-when-small-3"> MAKE RESERVATIONS AND DISCOVER MORE.</span></h3>
+		<!--h4 class="panel-subtitle">MAKE RESERVATIONS AND DISCOVER MORE</h4-->
+		<p class="panel-body-text two-liner">Book recommended unique top rated lodging, tours, and expeditions at various price points that match your criteria.</p>
+		<ul class="panel-lists">
+			<li><p>We curate lodging & experiences from top sources such as:</p></li>
+			<li><p>Condé Nast Traveler</p></li>
+			<li><p>National Geographic</p></li>
+			<li><p class="hide-when-small-2">Forbes Travel Guide</p></li>
+			<li><p>Architectural Digest</p></li>
+			<li><p class="hide-when-small-2">Extreme Sports</p></li>
+			<li><p>and more...</p></li>
+		</ul>
+	</div>
+	<div class="footer-box"><!-- replace with another image -->
+		<% if current_page?(root_path) %>
+			<h4 class="bottom-call">Sign up for a special early invite.<span class="hide-when-small">We'll let you in as soon as we can.</span></h4>
+			<%= form_for :invite, url: invites_path do |f| %>
+			    <%= f.text_field :email, :placeholder => "your email", :class => "sign-up-form" %>
+			    <%= f.submit "SIGN UP", :class => "sign-up-button" %>
+			<% end %>
+		<% end %>
+		<div class="mobile-footer-menu">
+			<span class="major-footer-links-small"><%= link_to "Home", root_path %></span>
+			<span class="major-footer-links-small"><%= link_to "About", about_path %></span>
+			<span class="major-footer-links-small"><%= link_to "Support", customer_support_path %></span>
+			<span class="major-footer-links-small"><%= link_to "Work With Us", work_with_us_path %></span>
+		</div>
+
+		<div class="social-media-icons">
+			<a href="https://www.pinterest.com/trepicepictrips/"><img class="social-icon" src="img/social/pinterest-icon.png"></a>
+			<a href="https://www.facebook.com/trepic.makeyourtripepic/"><img class="social-icon" src="img/social/facebook-icon.png"></a>
+			<a href="https://twitter.com/trepicgoepic"><img class="social-icon" src="img/social/instagram-icon.png"></a>
+			<a href="https://twitter.com/trepicepictrips"><img class="social-icon" src="img/social/twitter-icon.png"></a>
+		</div>
+		<div class="end-text-no-image">
+			<span class="copyright-text">© 2014 : 2015 COPYRIGHT TREPIC, INC.</span>
+			<span class="legal-page-link" style="color:#4c4c4c"><%= link_to "LEGAL PAGE", legal_path %></span>
+			<span class="major-footer-links highlight"><%= link_to "Home", root_path %></span>
+			<span class="major-footer-links"><%= link_to "About", about_path %></span>
+			<span class="major-footer-links"><%= link_to "Support", customer_support_path %></span>
+			<span class="major-footer-links"><%= link_to "Work With Us", work_with_us_path %></span>
+		</div>
+	</div>
+
+</div>
+
+

@@ -1,0 +1,238 @@
+/* General */
+
+* {
+	font-family: "Quicksand", sans-serif;
+	color: #2d2d2d;
+	background-color: #f5f5f5;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.container {
+	max-width: 60em;
+	margin: 0 auto;
+}
+
+
+
+/* Header */
+.left-header-block {
+	float: left;
+	margin: 2% 0 1% 2%;
+}
+
+.udacity-logo {
+	width: auto;
+}
+
+.right-header-block {
+	text-align: right;
+	margin: 2% 1% 1% 0;
+}
+
+h1 {
+	font-size: 3.5em;
+	text-transform: uppercase;
+	margin: 0 0 0 0;
+	font-weight: 300;
+}
+
+.subheading {
+	font-size: 1.2em;
+	margin: 0.66% 0 0 0;
+}
+
+
+
+/* Hero Image */
+hr {
+	margin-bottom: 1%;
+}
+
+figure {
+	width: 98.66%;
+	margin-left: 0;
+	padding: 0 0.66% 0 0.66%;
+}
+
+
+
+/* Portfolio Section */
+.image-preview {
+	margin: 0 2% 0 2%;
+}
+
+h2 {
+	font-size: 2.5em;
+	margin: 3.5% 0.66% 2% 0.66%;
+	font-weight: 400;
+}
+
+h3 {
+    margin: 4% 2% 0 2%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+.subtitle {
+    margin: 0 2% 0 2%;
+	margin-top: -10px;
+	text-align: center;
+}
+
+
+
+/* 12-Column Grid Structure */
+.row {
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+/* Most of these columns are unnecessary; only three (3,4, & 9) are used. */
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-4 a {
+	text-decoration: none;
+}
+
+.col-4:hover {
+	opacity: 0.6;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+	margin: 0;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+
+
+/* Media Queries */
+/*
+ * This site was NOT built mobile-first. Hence, the default CSS styles are for larger screens,
+ * and the media-query-specific styles are for smaller screens.
+*/
+@media only screen and (max-device-width: 480px) {
+	/*
+	* When using iOS Simulator w/ Chrome dev tools, my name/title (houses in col-9) move down
+	* and to the left, inexplicably. Changing the width from 75% to 100% for small-screen-devices
+	* seems to fix the problem.
+	*/
+	.col-9 {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.udacity-logo {
+		width: 70%;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	.subheading {
+		font-size: 1em;
+	}
+
+	hr {
+		margin-bottom: 2%;
+	}
+
+	h2 {
+		font-size: 1.85em;
+		margin-bottom: 4%;
+	}
+
+	.col-4 {
+		width: 100%;
+		margin-bottom: 3em;
+	}
+
+	.image-preview {
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+	.udacity-logo {
+		width: 85%;
+	}
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	.subheading {
+		font-size: 1.1em;
+	}
+
+	hr {
+		margin-bottom: 1.5%;
+	}
+
+	h2 {
+		font-size: 2em;
+		margin-bottom: 4%;
+	}
+
+	h3 {
+		margin-top: 0.66em;
+		font-size: 1em;
+	}
+
+	.subtitle {
+		font-size: 0.8em;
+		margin-top: 0.33em;
+	}
+}
+
+/* How do I order all the rules? Is there a rule for that? */

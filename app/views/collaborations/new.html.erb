@@ -1,0 +1,46 @@
+<div class="supplementary-container">
+	<div class="topper"></div>
+	<div class="collaboration-hero">
+			<%= link_to image_tag("trepic-logo-white-shadow.png", :class => "trepic-logo-supplementary"), root_path %>
+	</div>
+	<div class="collaboration-body">
+			<h1 class="supplemental-title">Work With Us</h1>
+			<%= form_for :collaboration, url: collaborations_path do |f| %>
+				<% if @collaboration.errors.any? %>
+					<span class="error-list-item">Please fix the following items on the form.</span>
+					<ol class="error-list">
+						<% @collaboration.errors.full_messages.each do |msg| %>
+							<li><span class="error-list-item"><%= msg %></span><br /></li>
+						<% end %>
+					</ol>
+				<% end %>
+				<%= f.text_field :name, placeholder: "name", :class => "collaboration-form-small" %>
+				<%= f.text_field :email, placeholder: "email", :class => "collaboration-form-small" %>
+				<%= f.text_field :phone, placeholder: "phone", :class => "collaboration-form-small" %>
+				<%= f.text_area :message, placeholder: "message", :rows => "4", :class => "support-form-large" %>
+				<%= f.submit "SEND", class: "support-button" %>
+			<% end %>
+	</div>
+	<div class="spacer-2"></div>
+	<div class="supplementary-mobile-footer">
+		<div class="spacer"></div>
+		<div class="mobile-footer-menu">
+			<span class="major-footer-links-small"><%= link_to "Home", root_path %></span>
+			<span class="major-footer-links-small"><%= link_to "About", about_path %></span>
+			<span class="major-footer-links-small"><%= link_to "Support", customer_support_path %></span>
+			<span class="major-footer-links-small highlight"><%= link_to "Work With Us", work_with_us_path %></span>
+		</div>
+
+		<div class="social-media-icons">
+			<a href="https://www.pinterest.com/trepicepictrips/"><img class="social-icon" src="img/social/pinterest-icon.png"></a>
+			<a href="https://www.facebook.com/trepic.makeyourtripepic/"><img class="social-icon" src="img/social/facebook-icon.png"></a>
+			<a href="https://twitter.com/trepicgoepic"><img class="social-icon" src="img/social/instagram-icon.png"></a>
+			<a href="https://twitter.com/trepicepictrips"><img class="social-icon" src="img/social/twitter-icon.png"></a>
+		</div>
+		<div class="end-text-no-image">
+			<span class="copyright-text">© 2014 : 2015 COPYRIGHT TREPIC, INC.</span>
+			<span class="legal-page-link" style="color:#4c4c4c"><%= link_to "LEGAL PAGE", legal_path %></span>
+		</div>
+	</div>
+</div>
+

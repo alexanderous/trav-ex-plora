@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <!--link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6331294/652548/css/fonts.css" /-->
+  </head>
+  <body>
+    <%= image_tag attachments["success-gradient-email.jpg"].url, :size => "575x14" %>
+    <!--h1 style="font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, font-style: normal; font-weight: 200; font-size: 30px; color: #4c4c4c;">Welcome to Trepic!</h1-->
+    <h1 style="font-family: 'Open Sans', Arial; font-style: normal; font-weight: 200; font-size: 32px; color: #4c4c4c; letter-spacing: 0.01em;">Welcome to Trepic!</h1>
+    <span style="font-family: 'Open Sans', Arial; font-style: normal; font-weight: 400; font-size: 14px; color: #4c4c4c; letter-spacing: 0.01em;">
+      <p>You have successfully signed up on Trepic's waitlist.</p>
+      <p>We'll be contacting you soon when the mobile app is ready for download.</p>
+      <p>Wishing You an Epic Next Trip,</p>
+      <p>Trepic</p>
+      <p><%= @url %></p>
+    </span>
+    <%= image_tag attachments["trepic-logo-rgb.jpg"].url, :size => "244x150" %>
+  </body>
+</html>
+
+
+
+

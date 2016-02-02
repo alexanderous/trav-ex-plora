@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trepic</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+  <%= csrf_meta_tags %>
+  <!-- Fonts -->
+    <!-- Gotham Narrow Screensmart -->
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6331294/652548/css/fonts.css" />
+  <!-- fonts end -->
+</head>
+<body>
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+  	<%= yield %>
+  	<% if current_page?(root_path) %>
+    <% else %>
+      <%= render 'layouts/footer' %>
+    <% end %>
+</body>
+</html>

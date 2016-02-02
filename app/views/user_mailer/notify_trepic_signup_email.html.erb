@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <!--link href="http://db.onlinewebfonts.com/c/bc9fa02b4227255be2387a7e19a3e09b?family=Akkurat-Light" rel="stylesheet" type="text/css"/-->
+    <!--link href="http://db.onlinewebfonts.com/c/cc4c7e3aa2ab2258b5e0bc946be1093a?family=Akkurat-Bold" rel="stylesheet" type="text/css"/-->
+  </head>
+  <body>
+    <%= image_tag attachments["success-gradient-email.jpg"].url, :size => "575x14" %>
+    <h1 style="font-family: 'Open Sans', Arial; font-style: normal; font-weight: 200; font-size: 32px; color: #4c4c4c; letter-spacing: 0.01em;">New Signup!</h1>
+    <span style="font-family: 'Open Sans', Arial; font-style: normal; font-weight: 400; font-size: 14px; color: #4c4c4c; letter-spacing: 0.01em;">
+      <p><%= @invite.email %> just signed up.</p>
+      <p>Cheers,</p>
+      <p>Trepic</p>
+      <p><%= @url %></p>
+    </span>
+    <%= image_tag attachments["trepic-logo-rgb.jpg"].url, :size => "244x150" %>
+  </body>
+</html>
